@@ -28,10 +28,10 @@ public class AlloyContentAreaItemRenderer
 
         return tagName.ToLowerInvariant() switch
         {
-            ContentAreaTags.FullWidth => "col-12",
-            ContentAreaTags.WideWidth => "col-12 col-md-8",
-            ContentAreaTags.HalfWidth => "col-12 col-sm-6",
-            ContentAreaTags.NarrowWidth => "col-12 col-sm-6 col-md-4",
+            ContentAreaTags.FullWidth => "w-full",
+            ContentAreaTags.WideWidth => "w-full col-md-8",
+            ContentAreaTags.HalfWidth => "w-full col-sm-6",
+            ContentAreaTags.NarrowWidth => "w-full col-sm-6 col-md-4",
             _ => string.Empty,
         };
     }

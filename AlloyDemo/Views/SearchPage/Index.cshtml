@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/Layouts/_TwoPlusOne.cshtml";
 }
 
-<div class="row">
+<section>
     <div class="span8,search-form">
         @{
             using (Html.BeginForm(null, null, Html.ViewContext.IsInEditMode() ? FormMethod.Post : FormMethod.Get, new { @action = Model.Layout.SearchActionUrl }))
@@ -14,11 +14,11 @@
             }
         }
     </div>
-</div>
+</section>
 
 @if (Model.Hits != null)
 {
-    <div class="row">
+    <section>
         <div class="span8 grayHead">
             <h2>@Html.Translate("/searchpagetemplate/result")</h2>
             <p>
@@ -35,9 +35,9 @@
                 @Html.Translate("/searchpagetemplate/hits")
             </p>
         </div>
-    </div>
+    </section>
 
-    <div class="row">
+    <section>
         <div class="span8 SearchResults">
             @foreach (var hit in Model.Hits)
             {
@@ -48,7 +48,7 @@
                 </div>
             }
         </div>
-    </div>
+    </section>
 
 }
 

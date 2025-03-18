@@ -19,7 +19,7 @@
     }
     @Html.CanonicalLink()
     @Html.AlternateLinks()
-    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/tailwind.min.css" />
     <link rel="stylesheet" href="~/css/style.min.css" />
     <link rel="stylesheet" href="~/css/theme.min.css" />
     <link rel="shortcut icon" href="~/favicon.ico" type="image/x-icon" />
@@ -27,29 +27,25 @@
 </head>
 
 <body>
-    @if (Model.Layout.IsInReadonlyMode)
-    {
-        await Html.RenderPartialAsync("Readonly", Model);
-    }
-
-    @await Html.RenderEPiServerQuickNavigatorAsync()
-
-    @Html.FullRefreshPropertiesMetaData()
-
-    @if (!Model.Layout.HideHeader)
-    {
-        await Html.RenderPartialAsync("Header", Model);
-    }
-
-    <div class="container">
-        @RenderBody()
+    <div class="alloy-container grid grid-rows-[auto_1fr_auto]">
+        @if (Model.Layout.IsInReadonlyMode)
+        {
+            await Html.RenderPartialAsync("Readonly", Model);
+        }
+        @await Html.RenderEPiServerQuickNavigatorAsync()
+        @Html.FullRefreshPropertiesMetaData()
+        @if (!Model.Layout.HideHeader)
+        {
+            await Html.RenderPartialAsync("Header", Model);
+        }
+        <main class="alloy-content p-4 flex flex-col gap-4">
+            @RenderBody()
+        </main>
+        @if (!Model.Layout.HideFooter)
+        {
+            await Html.RenderPartialAsync("Footer", Model);
+        }
+        <required-client-resources area="Footer" />
     </div>
-
-    @if (!Model.Layout.HideFooter)
-    {
-        await Html.RenderPartialAsync("Footer", Model);
-    }
-    <required-client-resources area="Footer" />
-    <script src="~/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

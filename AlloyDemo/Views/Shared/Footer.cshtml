@@ -1,21 +1,21 @@
 @model IPageViewModel<SitePageData>
 
 <footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
+    <section class="footer-content flex">
+
+            <div>
                 <h3>@Html.Translate("/footer/products")</h3>
                 <ul epi-property="@Model.Layout.ProductPages" />
             </div>
-            <div class="col-3">
+            <div>
                 <h3>@Html.Translate("/footer/company")</h3>
                 <ul epi-property="@Model.Layout.CompanyInformationPages" />
             </div>
-            <div class="col-3">
+            <div>
                 <h3>@Html.Translate("/footer/news")</h3>
                 <ul epi-property="@Model.Layout.NewsPages" />
             </div>
-            <div class="col-3">
+            <div>
                 <h3>@Html.Translate("/footer/customerzone")</h3>
                 <ul epi-property="@Model.Layout.CustomerZonePages" />
                 <ul>
@@ -33,6 +33,5 @@
                     </li>
                 </ul>
             </div>
-        </div>
-    </div>
+    </section>
 </footer>

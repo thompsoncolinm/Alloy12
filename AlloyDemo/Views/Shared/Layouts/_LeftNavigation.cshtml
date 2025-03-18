@@ -4,13 +4,13 @@
 
 @{await Html.RenderPartialAsync("Breadcrumbs", Model);}
 
-<div class="row">
-    <div class="d-none d-lg-flex col-3 aside">
+<section>
+    <div class="hidden lg:flex w-1/4 aside">
         @{await Html.RenderPartialAsync("SubNavigation", Model);}
         @RenderSection("RelatedContent", false)
     </div>
 
-    <div class="col-12 col-lg-9">
+    <div class="w-full lg:w-3/4">
         @RenderBody()
     </div>
-</div>
+</section>

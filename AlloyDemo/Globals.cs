@@ -45,10 +45,10 @@ public class Globals
     /// </summary>
     public static class ContentAreaTags
     {
-        public const string FullWidth = "full";
-        public const string WideWidth = "wide";
-        public const string HalfWidth = "half";
-        public const string NarrowWidth = "narrow";
+        public const string FullWidth = "w-full";
+        public const string WideWidth = "w-11/12";
+        public const string HalfWidth = "w-1/2";
+        public const string NarrowWidth = "w-1/3";
         public const string NoRenderer = "norenderer";
     }
 
