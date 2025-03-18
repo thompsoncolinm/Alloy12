@@ -1,0 +1,33 @@
+# Ignore Visual Studio temporary files, build results, and
+# common configuration files.
+.vs/
+*.user
+*.suo
+*.cache
+*.log
+*.pdb
+*.obj
+*.exe
+*.dll
+*.idb
+*.class
+*.pyc
+*.ipynb_checkpoints/
+*.DS_Store
+
+# Ignore build directories
+bin/
+obj/
+
+# Ignore database files
+*.mdf
+*.ldf
+
+# Ignore environment-specific configuration
+appsettings.*.json
+
+# Ignore Optimizely specific folders
+AlloyDemo/App_Data/
+AlloyDemo/Logs/
+AlloyDemo/Modules/
+AlloyDemo/Static/
