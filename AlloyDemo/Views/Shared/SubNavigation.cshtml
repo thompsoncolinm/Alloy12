@@ -9,7 +9,7 @@
             </a>
             @if (item.Selected)
             {
-                <ul class="nav nav-pills flex-column">
+                <ul class="nav nav-pills flex flex-col items-start gap-2">
                     @Html.MenuList(item.Page.ContentLink, ItemTemplate)
                 </ul>
             }
@@ -18,6 +18,6 @@
     }
 }
 
-<ul class="nav nav-pills flex-column mb-auto">
+<ul class="nav nav-pills flex flex-col items-start gap-2 mb-auto">
     @Html.MenuList(Model.Section.ContentLink, ItemTemplate)
 </ul>

@@ -2,13 +2,13 @@
 
 @{ Layout = "~/Views/Shared/Layouts/_LeftNavigation.cshtml"; }
 
-<div class="content">
+<section class="content">
     <h1 epi-property="@Model.CurrentPage.PageTypeName">@Model.CurrentPage.PageName</h1>
     <p class="lead" epi-property="@Model.CurrentPage.MetaDescription">@Model.CurrentPage.MetaDescription</p>
     <div class="block w-full">
         <div epi-property="@Model.CurrentPage.MainBody" />
     </div>
     <div epi-property="@Model.CurrentPage.NewsList" />
-</div>
+</section>
 
-<section epi-property="@Model.CurrentPage.MainContentArea" />
+<section class="flex flex-wrap" epi-property="@Model.CurrentPage.MainContentArea" />

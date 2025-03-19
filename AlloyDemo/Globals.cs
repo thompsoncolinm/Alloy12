@@ -47,9 +47,9 @@ public class Globals
     {
         public const string FullWidth = "w-full";
         public const string WideWidth = "w-11/12";
-        public const string HalfWidth = "w-1/2";
-        public const string NarrowWidth = "w-1/3";
-        public const string NoRenderer = "norenderer";
+        public const string HalfWidth = "w-1/2 max-w-md";
+        public const string NarrowWidth = "w-1/3 max-w-sm";
+        public const string NoRenderer = "hidden";
     }
 
     /// <summary>

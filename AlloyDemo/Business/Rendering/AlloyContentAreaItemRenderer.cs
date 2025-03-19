@@ -29,9 +29,9 @@ public class AlloyContentAreaItemRenderer
         return tagName.ToLowerInvariant() switch
         {
             ContentAreaTags.FullWidth => "w-full",
-            ContentAreaTags.WideWidth => "w-full col-md-8",
-            ContentAreaTags.HalfWidth => "w-full col-sm-6",
-            ContentAreaTags.NarrowWidth => "w-full col-sm-6 col-md-4",
+            ContentAreaTags.WideWidth => "w-full md:w-2/3",
+            ContentAreaTags.HalfWidth => "w-1/2",
+            ContentAreaTags.NarrowWidth => "w-1/2 md:w-1/3",
             _ => string.Empty,
         };
     }

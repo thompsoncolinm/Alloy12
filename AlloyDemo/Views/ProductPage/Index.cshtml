@@ -2,15 +2,15 @@
 
 @{ Layout = "~/Views/Shared/Layouts/_TwoPlusOne.cshtml"; }
 
-<div class="content">
+<section class="content">
     <h1 epi-property="@Model.CurrentPage.PageName">
         @Model.CurrentPage.PageName
     </h1>
     <p class="lead" epi-property="@Model.CurrentPage.MetaDescription">@Model.CurrentPage.MetaDescription</p>
     <div class="block w-full" epi-property="@Model.CurrentPage.MainBody" />
-</div>
+</section>
 
-<section epi-property="@Model.CurrentPage.MainContentArea">
+<section class="flex flex-wrap" epi-property="@Model.CurrentPage.MainContentArea">
     <div epi-property-item class="block" epi-on-item-rendered="OnItemRendered" />
 </section>
 

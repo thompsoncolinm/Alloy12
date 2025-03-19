@@ -6,7 +6,7 @@
 
 @{await Html.RenderPartialAsync("Breadcrumbs");}
 
-<section class="flex flex-wrap md:flex-nowrap gap-4">
+<div class="flex flex-wrap md:flex-nowrap gap-4">
     <article class="w-full md:w-2/3 lg:w-3/4 m-auto pr-4">
         @RenderBody()
     </article>
@@ -21,4 +21,4 @@
             @Html.PropertyFor(x => ((IHasRelatedContent)x.CurrentPage).RelatedContentArea, new { Aside = true })
         }
     </aside>
-</section>
+</div>

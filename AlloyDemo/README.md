@@ -46,3 +46,8 @@ Create an empty database on the external database server and update the connecti
 ```bash
 $ dotnet run
 ````
+
+Tailwind
+```
+npx tailwindcss -i ./wwwroot/css/tailwind.css -o ./wwwroot/css/tailwind-styles.css --watch
+```
