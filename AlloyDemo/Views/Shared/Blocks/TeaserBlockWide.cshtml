@@ -1,10 +1,10 @@
 @model TeaserBlock
 
 <div class="flex flex-wrap items-center">
-    <div class="w-full lg:w-1/2" epi-property="@Model.Image">
+    <div class="w-full lg:w-1/2 lg:pr-2" epi-property="@Model.Image">
         <img class="pb-3 lg:pb-0" src="@Url.ContentUrl(Model.Image)" />
     </div>
-    <div class="w-full lg:w-1/2 lg:text-start">
+    <div class="w-full lg:w-1/2 lg:pl-2 lg:text-start">
         @*Link the teaser block only if a link has been set and not displayed in preview*@
         @using (Html.BeginConditionalLink(
             !ContentReference.IsNullOrEmpty(Model.Link) && !(Html.ViewContext.IsPreviewMode()),
